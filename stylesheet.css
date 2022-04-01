@@ -1,0 +1,567 @@
+* {
+    padding: 0%;
+    margin: 0%;    
+}
+
+h1 {font-family: Erotique Alternate Trial, serif; color: white; font-size: 70px;}
+h2 {
+    font-family: Erotique Alternate Trial, serif;
+    color: white;
+    text-align: center;
+    margin: 30px 0px;
+
+}
+h4 {
+    font-family: Erotique Alternate Trial, serif;
+    color: white;  
+    text-align: center;
+}
+h3 {
+    font-family: raleway, sans-serif;
+    color: white;
+    text-align: center;
+}
+h6{
+    font-size: 1rem; color: white;
+}
+p, .form-label, a, h5, h6{
+    font-family: raleway, sans-serif;
+}
+p{
+    color: white;
+}
+body{
+    background-color: #101A24;
+}
+.btn-amarillo{
+    background: #FFDD67;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: raleway, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-rosado{
+    background: #D82958;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: raleway, sans-serif;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+.section{
+    max-width: 1400px;
+    margin: auto;
+}
+nav{
+    background-color: #111111;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+}
+nav .menu{
+    display: flex;
+}
+nav .menu li{
+    padding: 0 20px;
+}
+.menu li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav .column-menu{
+    display: none;
+}
+.portada-texto-derecha{
+    width: 60%;
+    background-position: right;
+}
+footer{
+    background-color: #111111;
+}
+#footer{
+    display: flex;
+    padding: 50px 10px;
+}
+.column-footer-01{
+    width: 20%;
+}
+.column-footer-01 a > img{
+    width: 80%;
+}
+.column-footer-02{
+    width: 60%;
+}
+.redes-sociales{
+    display: flex;
+    justify-content: space-around;
+    max-width: 90%;
+}
+
+.redes-sociales img{
+    width: 80%;
+    margin: 10px 0;
+}
+.redes-sociales li{
+    list-style: none;
+}
+footer h5{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+footer .menu{
+    list-style: none;
+    padding: 0px;
+}
+footer .menu li a{
+    font-weight: normal;
+}
+
+footer .by{
+    margin: 20px 0;
+}
+
+
+/* HOME */
+/* Estilos header */
+.slider{
+    display: flex;
+    height: 600px;
+}
+
+.portada-texto-derecha.portada-home{
+    background-image: url(./assets/portada-01.png);
+}
+.portada-texto-izquierda{
+    /* padding: 150px 100px; */
+    width: 40%;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 100px;
+}
+.down-tittle{
+    margin-bottom: 40px;
+}
+.marcas {
+    background-color: #111111;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+.marcas img{
+    padding: 20px;
+}
+/* Carrusel vodka */
+#carrusel-vodka{
+    background-color: #111111;
+    display: flex;   
+}
+#carrusel-vodka .izquierda{
+    background-image: url(./assets/carrusel-vodka.png);
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#carrusel-vodka h2{
+    text-align: left;
+    font-size: 4rem;
+}
+#carrusel-vodka .descripcion{
+    max-width: 70%;
+}
+#carrusel-vodka .nociones{
+    display: flex;
+    padding: 50px 0;
+}
+
+#carrusel-vodka .derecha{
+    padding: 70px;
+    width: 50%;
+}
+.colum-descrpcion{
+    display: flex;
+    padding-right: 40px;
+}
+.colum-descrpcion > div{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+/* Bebidas de verano */
+.cards{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 50px 0;
+}
+
+.card-trago{
+    /* width: 236px;
+    height: 290px; */
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.imagen-card{
+    filter: grayscale(100%);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    width: 70%;
+    margin: auto;
+}
+.card-trago:hover .imagen-card{
+    filter: none;
+}
+.descripcion-cards{
+    z-index: 0;
+    margin-top: -60px;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+.card-trago:hover .descripcion-cards{
+    z-index: 0;
+    margin-top: -80px;
+}
+.center{
+    text-align: center;
+    padding: 50px 0px;
+}
+#trending-tragos h3{
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+#formulario{
+    background: #FFDD67;
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    margin-top: 60px;
+}
+#formulario article,#formulario form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#formulario h2{
+    color: black;
+    font-size: 3rem;
+    margin: 6px 0;
+}
+#formulario p{
+    color: black;
+}
+#formulario form{
+    width: 300px;
+}
+.form-group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.form-field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1rem;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+.form-field::placeholder {
+    color: transparent;
+}
+.form-field:placeholder-shown ~ .form-label {
+    cursor: text;
+    top: 20px;
+  }
+  .form-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+    border: #D82958;
+  }
+  .form-field:focus {
+    padding-bottom: 6px;
+    font-weight: regular;
+    border-bottom: 3px solid #D82958;
+    border-image-slice: 1;
+  } 
+  .form-field:focus ~ .form-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #D82958;
+    font-weight: 700;
+  }  
+  input:-internal-autofill-selected {
+    color: -internal-light-dark(red) !important;
+  }
+
+
+/* BEBIDAS */
+.portada-texto-derecha.portada-bebidas{
+    background-image: url(./assets/portada-bebidas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cards.fila{
+    padding: 50px 0;
+}
+
+/*RECETAS*/
+.portada-texto-derecha.portada-recetas{
+    background-image: url(./assets/portada-recetas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.promocion.vodka{
+    background-image: url(./assets/promo-vodka.png);
+    height: 300px;
+    background-size: cover;
+}
+.promocion h2{
+    text-align: left;
+
+}
+.promocion > div{
+    padding: 70px 0 0 65px;
+}
+/* CURSOS */
+.portada-texto-derecha.portada-cursos{
+    background-image: url(./assets/cursos-desktop.png);
+}
+.card-cursos{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    max-width: 30%;
+    /* min-height: 310px; */
+    transition: all 0.35s ease;
+}
+.card-cursos:hover{
+    transform: scale(1.03);
+}
+.card-cursos h3{
+    font-family: Erotique Alternate Trial, serif;
+    text-align: left;
+    padding: 10px 20px;
+}
+.card-cursos p{
+    padding: 0px 20px 26px; 
+}
+.card-cursos img{
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.promocion.verano{
+    background-image: url(./assets/promo-verano.png);
+    height: 300px;
+    background-size: cover;
+}
+/*Nosotros*/
+.portada-texto-derecha.portada-nosotros{
+    background-image: url(./assets/nosotros-desktop.png);
+}
+.promocion.nosotros{
+    background-image: url(./assets/promo-nosotros.png);
+    height: 300px;
+    background-size: cover;
+    margin-top: 25px;
+}
+.img-nosotros{
+    text-align: center;
+}
+
+/* Tablet */
+@media only screen and (min-width:416px) and (max-width:1400px) {
+    h1{
+        font-size: 50px;
+    }
+    .section{
+        max-width: 95%;
+    }
+    nav .menu{
+        display: none;
+    }
+/* HOME */
+    .portada-texto-derecha{
+        background-position: 70%;
+    }
+    .marcas{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .marcas img{
+        padding: 0%;
+    }
+    .center{
+        padding: 0px 0 50px 0px;
+    }
+    .nociones{
+        flex-direction: column;
+    }
+    .colum-descrpcion{
+        padding-bottom: 20px;
+    }
+    .imagen-card{
+        max-width: 200px;
+    }
+
+    /*Recetas*/
+    .promocion.vodka{
+        background-position: right;
+    }
+    /* Nosotros */
+    .img-nosotros img{
+        max-width: 100%;
+    }
+}
+/* Mobile */
+@media only screen and (max-width:415px){
+    .btn-amarillo{
+        margin: auto;
+        width: max-content;
+        justify-content: center;
+    }
+    h1{
+        font-size: 50px;
+    }
+    nav .menu{
+        display: none;
+    }
+    .portada-texto-derecha{
+        display: none;
+    }
+    .portada-texto-izquierda{
+        width: 100%;
+        padding: 50% 10%;
+        align-items: center;
+        text-align: center;
+    }
+    /* HOME */
+    .slider{
+        height: 615px;
+        /* opacity: 0.9; */
+    }
+    .marcas{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .marcas img {
+        padding: 0;
+        width: 50%;
+    }
+    .cards {
+        overflow-x: scroll;
+        column-gap: 20px;
+        justify-content: flex-start;
+        padding: 20px 40px;
+    }
+    .imagen-card {
+        width: auto;
+    }
+    #carrusel-vodka{
+        flex-direction: column;
+    }
+    #carrusel-vodka .izquierda {
+        height: 300px;
+        width: 100%;
+        }
+    #carrusel-vodka .derecha{
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #carrusel-vodka .nociones{
+        flex-direction: column;  
+    }
+    #carrusel-vodka h2{
+        text-align: center;
+    }
+    #carrusel-vodka .descripcion{
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    .colum-descrpcion {
+        padding-right: 0;
+        justify-content: center;
+    }
+    #carrusel-vodka .derecha .btn-amarillo{
+        margin-bottom: 30px;
+    }
+    #formulario{
+        flex-direction: column;
+        padding: 20% 5%;
+        text-align: center;
+        align-items: center;
+    }
+    #footer{
+        flex-direction: column;
+    }
+    .column-footer-01, .column-footer-02{
+        width: 100%;
+        text-align: center;
+        padding: 5% 0; 
+    }
+    .redes-sociales{
+        margin: auto;
+    }
+   .imagen-card{
+        filter: none;
+        max-width: 300px;
+    }
+    #footer.margin{
+        margin-top: 30px;
+    }
+    /*RECETAS*/
+    .promocion.vodka{
+        background-image: url(./assets/promo-vodka-mobile.png);
+        height: 500px;
+        margin-top: 25px;
+    }
+    .portada-texto-izquierda.recetas{
+        background-image: url(./assets/recetas-mobile.png);
+    }
+        /*Cursos*/
+    .card-cursos{
+        width: 400px;
+        max-width: none;
+    }
+    .portada-texto-izquierda.recetas{
+        background-image: url(./assets/cursos-mobile.png);
+    }
+    /* Nosotros */
+    .img-nosotros img{
+        max-width: 100%;
+    }
+    .portada-texto-izquierda.nosotros{
+        background-image: url(./assets/nosotros-mobile.png);
+    }
+}
+
+/* Huge */
+@media only screen and (min-width: 1280px) {
+
+}
