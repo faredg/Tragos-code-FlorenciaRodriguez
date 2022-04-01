@@ -31,7 +31,9 @@ p{
     color: white;
 }
 body{
-    background-color: #101A24;
+    /* background-color: #101A24; */
+    background: rgb(16,26,36);
+    background: linear-gradient(90deg, rgba(16,26,36,1) 0%, rgba(50,85,120,1) 100%);
 }
 .btn-amarillo{
     background: #FFDD67;
