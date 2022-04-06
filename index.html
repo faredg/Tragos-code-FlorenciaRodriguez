@@ -8,7 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
     <title>Trago Code</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./stylesheet.css">
+ 
 </head>
 <body>
     <header>
@@ -53,66 +56,113 @@
             </ul>
         </div>
         </nav>
-        <div class="slider">
+        <!-- <div class="slider"> -->
           <!-- ACA DEBERIA TENER UN SLIDER ¿SE PUEDE? -->
-          <div class="portada-texto-izquierda">
+          <!-- <div class="portada-texto-izquierda">
               <H1>Aprendé, crea y <br> disfrutá</H1>
               <p class="down-tittle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit <br> molestie pharetra. Donec purus magna, vehicula vel velit et.</p>
               <p><a href="#" class="btn-amarillo">¡Quiero ver recetas!</a></p>  
           </div>
           <div class="portada-texto-derecha portada-home"></div>  
-        </div>
+        </div> -->
+
     </header>
-    <section class="marcas">
-        <img src="./assets/marca-smirnoff.png" alt="marca-01">
-        <img src="./assets/marca-smirnoff.png" alt="marca-02">
-        <img src="./assets/marca-smirnoff.png" alt="marca-03">
-        <img src="./assets/marca-smirnoff.png" alt="marca-04">
-        <img src="./assets/marca-smirnoff.png" alt="marca-05">
-        <img src="./assets/marca-smirnoff.png" alt="marca-06">
-    </section>
-    <section id="trending-tragos" class="section">
-        <h2>Trending Tragos</h2>
-        <div class="cards">
-            <article>
-                <a href="#" class="card-trago">
-                    <img src="./assets/trago-bloodymary-color.png" alt="imagen-bloody-mary" class="imagen-card">
-                    <div class="descripcion-cards">
-                        <h4>Aperitivos</h4>
-                        <h3>BloodyMary</h3>
-                    </div>
-                </a>
-            </article>
-            <article>
-                <a href="#" class="card-trago">
-                    <img src="./assets/trago-ginmandarina-color.png" alt="imagen-bloody-mary" class="imagen-card">
-                    <div class="descripcion-cards">
-                        <h4>Aperitivos</h4>
-                        <h3>BloodyMary</h3>
-                    </div>
-                </a>
-            </article>
-            <article>
-                <a href="#" class="card-trago">
-                    <img src="./assets/trago-carioca-color.png" alt="imagen-bloody-mary" class="imagen-card">
-                    <div class="descripcion-cards">
-                        <h4>Aperitivos</h4>
-                        <h3>BloodyMary</h3>
-                    </div>
-                </a>
-            </article>
-            <article class="card-trago">
-                <a href="#" class="card-trago">
-                    <img src="./assets/trago-newallfashion-color.png" alt="imagen-bloody-mary" class="imagen-card">
-                    <div class="descripcion-cards">
-                        <h4>Aperitivos</h4>
-                        <h3>BloodyMary</h3>
-                    </div>
-                </a>
-            </article>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item bg bg1 active">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Example headline.</h1>
+                <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item bg bg2">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Another example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="item bg bg1">
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>One more for good measure.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="center"><a href="#" class="btn-amarillo">Conocé todos los tragos</a></p>
-    </section>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+    <div class="container-fluid">
+        <div class="row">
+            <section class="marcas col-sm-12 col-md-12 .col-lg-12">
+                <img src="./assets/marca-smirnoff.png" alt="marca-01">
+                <img src="./assets/marca-smirnoff.png" alt="marca-02">
+                <img src="./assets/marca-smirnoff.png" alt="marca-03">
+                <img src="./assets/marca-smirnoff.png" alt="marca-04">
+                <img src="./assets/marca-smirnoff.png" alt="marca-05">
+                <img src="./assets/marca-smirnoff.png" alt="marca-06">
+            </section>        
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <section id="trending-tragos" class="section">
+                <h2>Trending Tragos</h2>
+                <div class="cards">
+                    <article class="col-sm-12 col-md-3 col-lg-2">
+                        <a href="#" class="card-trago">
+                            <img src="./assets/trago-bloodymary-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                            <div class="descripcion-cards">
+                                <h4>Aperitivos</h4>
+                                <h3>BloodyMary</h3>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="col-sm-12 col-md-3 col-lg-2">
+                        <a href="#" class="card-trago">
+                            <img src="./assets/trago-ginmandarina-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                            <div class="descripcion-cards">
+                                <h4>Aperitivos</h4>
+                                <h3>BloodyMary</h3>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="col-sm-12 col-md-3 col-lg-2">
+                        <a href="#" class="card-trago">
+                            <img src="./assets/trago-carioca-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                            <div class="descripcion-cards">
+                                <h4>Aperitivos</h4>
+                                <h3>BloodyMary</h3>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="col-sm-12 col-md-3 col-lg-2">
+                        <a href="#" class="card-trago">
+                            <img src="./assets/trago-newallfashion-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                            <div class="descripcion-cards">
+                                <h4>Aperitivos</h4>
+                                <h3>BloodyMary</h3>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+                <p class="center"><a href="#" class="btn-amarillo">Conocé todos los tragos</a></p>
+            </section>
+        </div>
+||||</div>
     <section class="Carrusel-bebidas">
        <article id="carrusel-vodka">
             <div class="derecha">

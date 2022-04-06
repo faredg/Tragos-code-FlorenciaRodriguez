@@ -105,6 +105,38 @@ footer{
     max-width: 90%;
 }
 
+.carousel, .item, .active {
+    height: 100%;
+}
+.carousel-inner {
+    height: 100%;
+}
+.carousel {
+    margin-bottom: 60px;
+}
+.carousel-caption {
+    z-index: 10;
+}
+.carousel .item {
+    background-color: #777;
+}
+.carousel .carousel-inner .bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel .carousel-inner .bg1 {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/spiderweb.jpg');
+    background-position: center top;
+}
+.carousel .carousel-inner .bg2 {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/hearthand.jpg');
+    background-position: center center;
+}
+.carousel .carousel-inner .bg3 {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/158072/woman-camera.jpg');
+    background-position: center bottom;
+}
+
 .redes-sociales img{
     width: 80%;
     margin: 10px 0;
@@ -395,7 +427,7 @@ footer .by{
 }
 
 /* Tablet */
-@media only screen and (min-width:416px) and (max-width:1400px) {
+/* @media only screen and (min-width:416px) and (max-width:1400px) {
     h1{
         font-size: 50px;
     }
@@ -403,10 +435,10 @@ footer .by{
         max-width: 95%;
     }
     nav .menu{
-        display: none;
+        display: none; */
     }
 /* HOME */
-    .portada-texto-derecha{
+    /* .portada-texto-derecha{
         background-position: 70%;
     }
     .marcas{
@@ -435,11 +467,11 @@ footer .by{
     }
     /* Nosotros */
     .img-nosotros img{
-        max-width: 100%;
+        max-width: 100%; */
     }
 }
 /* Mobile */
-@media only screen and (max-width:415px){
+/* @media only screen and (max-width:415px){
     .btn-amarillo{
         margin: auto;
         width: max-content;
@@ -459,11 +491,10 @@ footer .by{
         padding: 50% 10%;
         align-items: center;
         text-align: center;
-    }
+    } */
     /* HOME */
-    .slider{
+    /* .slider{
         height: 615px;
-        /* opacity: 0.9; */
     }
     .marcas{
         flex-wrap: wrap;
@@ -536,7 +567,7 @@ footer .by{
     }
     #footer.margin{
         margin-top: 30px;
-    }
+    } */
     /*RECETAS*/
     .promocion.vodka{
         background-image: url(./assets/promo-vodka-mobile.png);
