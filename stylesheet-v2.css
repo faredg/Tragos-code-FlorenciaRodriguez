@@ -53,6 +53,16 @@ body{
     border: none;
     width: max-content;
 }
+.row.max-80{
+    max-width: 80%;
+    margin: auto;
+}
+.cabecera > .row{
+    padding-top: 10rem;
+}
+.img-nosotros{
+    width: 100%;
+}
 /* NAVEGADOR */
 .navbar-brand{
     padding: 20px 50px;
@@ -62,10 +72,21 @@ body{
 .portada-desktop, .portada-mobile{
     width: 100%;
 }
+.titulo-portada{
+    text-align: left;
+    z-index: 10;
+    margin-bottom: 350px;
+}
 
 /* Home */
+#navbarSupportedContent{
+    justify-content: flex-end;
+}
+#navbarSupportedContent>ul{
+    margin-right: 50px !important;
+}
 .portada-mobile{
-    display: none;
+    display: none !important;
 }
 .container-fluid.marcas{
     background-color: #111111;
@@ -143,18 +164,75 @@ body{
 .marcas img{
     width: 80%;
 }
-
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-cursos{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    max-width: 30%;
+    /* min-height: 310px; */
+    transition: all 0.35s ease;
+}
+.card-cursos:hover{
+    transform: scale(1.03);
+}
+.card-cursos img{
+    width: 100%;
+}
+/*NOSOTROS*/
+.promocion.nosotros{
+    background-image: url(./assets/promo-nosotros.png);
+    height: 300px;
+    background-size: cover;
+    margin-top: 25px;
+    padding-left: 20px;
+}
+.promocion.nosotros h2{
+    text-align: left;
+}
+.cabecera{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 25vw;
+}
+.nosotros-portada{
+    background-image: url(./assets/portada-nosotros.png);
+}
+.recetas-portada{
+    background-image: url(./assets/portada-recetas.png);
+}
+.row.recetas{
+    padding: 50px 0;
+}
+.cursos-portada{
+    background-image: url(./assets/portada-cursos.png);
+}
+.promocion.cursos{
+    background-image: url(./assets/promo-verano.png);
+    height: 300px;
+    background-size: cover;
+    margin-top: 25px;
+    padding-left: 20px;
+}
 
 @media (max-width:1228px){
     .promo-middle .column-1 .nociones{
         flex-direction: column;
     }
+    .titulo-portada{
+        margin-bottom: 130px;
+    }
 }
 /* Mobile */
 @media only screen and (max-width:415px){
+    .navbar-brand{
+        padding: 0;
+    }
     .row.tragos{
         overflow-x: scroll;
-        column-gap: 20px;
+        /* column-gap: 20px; */
         flex-wrap: nowrap;
         justify-content: flex-start;
         padding-left: 30px;
@@ -188,12 +266,21 @@ body{
         filter: none;
     }
     .portada-desktop{
-        display: none;
+        display: none !important;
     }
     .portada-mobile{
-        display:block;
+        display:block !important;
     }
     .carrusel-informacion{
         justify-content: center;
+    }
+    .hide-mobile{
+        display: none;
+    }
+    .cabecera{
+        height: 500px;
+    }
+    .nosotros-portada{
+        background-position: right;
     }
 }
