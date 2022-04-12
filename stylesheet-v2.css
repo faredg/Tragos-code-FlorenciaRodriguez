@@ -216,6 +216,18 @@ body{
     margin-top: 25px;
     padding-left: 20px;
 }
+.card-cursos > div{
+    padding: 20px;
+}
+.card-cursos > div h3{
+    text-align: left;
+}
+.card-cursos img{
+    border-radius: 10px 10px 0 0;
+}
+.cards.column-1{
+    margin-bottom: 40px;
+}
 
 @media (max-width:1228px){
     .promo-middle .column-1 .nociones{
@@ -282,5 +294,15 @@ body{
     }
     .nosotros-portada{
         background-position: right;
+    }
+    .cards{
+        flex-direction: column;
+    }
+    .card-cursos{
+        max-width: 100%;
+        margin: 10px;
+    }
+    .cards.column-1{
+        margin-bottom: 0px;
     }
 }
