@@ -40,6 +40,7 @@ body{
     font-family: raleway, sans-serif;
     color: black;
     text-decoration: none;
+    width: max-content;
 }
 
 .btn-rosado{
@@ -50,13 +51,27 @@ body{
     color: white;
     text-decoration: none;
     border: none;
+    width: max-content;
+}
+/* NAVEGADOR */
+.navbar-brand{
+    padding: 20px 50px;
+}
+
+/* CARRUSEL */
+.portada-desktop, .portada-mobile{
+    width: 100%;
 }
 
 /* Home */
+.portada-mobile{
+    display: none;
+}
 .container-fluid.marcas{
     background-color: #111111;
     height: auto;
 }
+
 .row.tragos{
     display: flex;
     justify-content: space-evenly;
@@ -129,6 +144,7 @@ body{
     width: 80%;
 }
 
+
 @media (max-width:1228px){
     .promo-middle .column-1 .nociones{
         flex-direction: column;
@@ -151,5 +167,33 @@ body{
     }
     .container-fluid.promo-middle .column-2{
         height: 200px;
+    }
+    .marcas .col-xs-3{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    .promo-middle .column-1 .row{
+        max-width: none;
+        padding-left: 0;
+        text-align: center;
+    }
+    .promo-middle .column-1 h2{
+        text-align: center;
+    }
+    .nociones{
+        align-items: center;
+    }
+    .row.tragos img{
+        filter: none;
+    }
+    .portada-desktop{
+        display: none;
+    }
+    .portada-mobile{
+        display:block;
+    }
+    .carrusel-informacion{
+        justify-content: center;
     }
 }

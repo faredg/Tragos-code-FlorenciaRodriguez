@@ -19,7 +19,7 @@
   <!-- Navegador -->
     <nav class="navbar navbar-light bg-light bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="./assets/logo-trago.png" width="200" height="auto" class="d-inline-block align-top" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -59,17 +59,20 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./assets/portada-01.png" alt="...">
+          <img src="./assets/portada-01.png" alt="..." class="portada-desktop">
+          <img src="./assets/portada-01-mobile.png" alt="..." class="portada-mobile">
           <div class="carousel-caption d-none d-md-block">
             <h5>...</h5>
             <p>...</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./assets/portada-02.png" alt="Second slide">
+          <img class="d-block w-100 portada-desktop" src="./assets/portada-02.png" alt="Second slide">
+          <img class="d-block w-100 portada-mobile" src="./assets/portada-01-mobile.png" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="./assets/portada-01.png" alt="Third slide">
+          <img class="d-block w-100 portada-desktop" src="./assets/portada-01.png" alt="Third slide">
+          <img class="d-block w-100 portada-mobile" src="./assets/portada-01-mobile.png" alt="Second slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -84,22 +87,22 @@
     <!-- Marcas -->
     <section class="container-fluid marcas">
       <div class="row">
-        <article class="col-sm-3 col-xs-6 col-md-4 col-lg-4 col-xl-2 column-1">
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-1">
           <img src="./assets/marca-smirnoff.png" alt="marca">
         </article>
-        <article class="col-sm-3 col-xs-6 col-md-4 col-lg-4 col-xl-2 column-2">
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-2">
           <img src="./assets/marca-smirnoff.png" alt="marca">
         </article>
-        <article class="col-sm-3 col-xs-6 col-md-4 col-lg-4 col-xl-2 column-3">
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-3">
           <img src="./assets/marca-smirnoff.png" alt="marca">
         </article>
-        <article class="col-sm-3 col-xs-6 col-md-4 col-lg-4 col-xl-2 column-4">
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-4">
           <img src="./assets/marca-smirnoff.png" alt="marca">
         </article>
-        <article class="col-sm-3 col-xs-6 col-md-4 col-lg-4 col-xl-2 column-5">
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-5">
           <img src="./assets/marca-smirnoff.png" alt="marca">
         </article>
-        <article class="col-sm-3 col-xs-6 col-md-4 col-lg-4 col-xl-2 column-6">
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-6">
           <img src="./assets/marca-smirnoff.png" alt="marca">
         </article>
       </div>
@@ -150,7 +153,7 @@
       <div class="row">
         <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 column-1">
           <div class="container">
-            <div class="row">
+            <div class="row carrusel-informacion">
               <h2>Vodka</h2>
               <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit molestie pharetra. Donec purus magna, vehicula vel velit et.</p>
               <div class="nociones">
@@ -169,6 +172,7 @@
                     </div>
                 </div>
             </div>
+            <a href="#" class="btn-amarillo">Aprendé más</a>
           </div>
 
           </div>
