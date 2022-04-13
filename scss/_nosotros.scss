@@ -1,0 +1,14 @@
+.btn-amarillo{
+    background: $amarillo;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: raleway, sans-serif;
+    color: $negro;
+    text-decoration: none;
+    width: max-content;
+    &:hover{
+        background: transparent;
+        border: 2px solid $amarillo;
+        color: $amarillo;
+    }
+}

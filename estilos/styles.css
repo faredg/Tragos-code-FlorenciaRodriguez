@@ -1,0 +1,12 @@
+.btn-amarillo {
+  background: #FFDD67;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: raleway, sans-serif;
+  color: #111111;
+  text-decoration: none;
+  width: max-content; }
+  .btn-amarillo:hover {
+    background: transparent;
+    border: 2px solid #FFDD67;
+    color: #FFDD67; }
