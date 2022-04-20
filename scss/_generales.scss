@@ -1,0 +1,61 @@
+h1 {font-family: $tipografia-general; color: $blanco; font-size: 70px;}
+h2 {
+    font-family: $tipografia-general;
+    color: $blanco;
+    text-align: center;
+    margin: 30px 0px;
+}
+h4 {
+    font-family: $tipografia-general;
+    color: $blanco;  
+    text-align: center;
+}
+h3 {
+    font-family: $tipografia-alternativa;
+    color: $blanco;
+    text-align: center;
+}
+h6{
+    font-size: 1rem; color: $blanco;
+}
+p, .form-label, a, h5, h6{
+    font-family: $tipografia-alternativa;
+}
+p{
+    color: $blanco;
+}
+body{
+    background-color: $azul;
+}
+
+$botones: ( 
+        amarillo: $amarillo,
+        magenta:  $magenta,
+); 
+
+@each $red, $color in $botones {
+    .btn-#{$red} {
+        background-color: $color;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: raleway, sans-serif;
+        color: $negro;
+        text-decoration: none;
+        width: max-content;
+    }
+    &:hover{
+        background: transparent;
+        border: 2px solid $color;
+        color: $color;
+    }
+ }
+ 
+
+
+.row.max-80{
+    max-width: 80%;
+    margin: auto;
+}
+.cabecera > .row{
+    padding-top: 10rem;
+}
