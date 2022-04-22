@@ -32,6 +32,40 @@ p {
 body {
   background-color: #101A24; }
 
+.btn-amarillo, .btn-magenta {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: raleway, sans-serif;
+  color: #111111;
+  text-decoration: none;
+  width: max-content;
+  background-size: 300% 100%;
+  transition: all 0.35s ease;
+  border: transparent; }
+
+.btn-amarillo {
+  background-color: #FFDD67;
+  font-family: raleway, sans-serif;
+  color: #111111; }
+
+.btn-magenta {
+  background-color: #FE2962;
+  font-family: raleway, sans-serif;
+  color: #111111; }
+
+.btn-amarillo:hover {
+  box-shadow: 1px -1px 20px 0px #FFDD67;
+  -webkit-box-shadow: 1px -1px 20px 0px #FFDD67;
+  -moz-box-shadow: 1px -1px 20px 0px #FFDD67; }
+
+.btn-magenta:hover {
+  box-shadow: 1px -1px 20px 0px #FE2962;
+  -webkit-box-shadow: 1px -1px 20px 0px #FE2962;
+  -moz-box-shadow: 1px -1px 20px 0px #FE2962; }
+
+.btn-magenta {
+  color: white; }
+
 .row.max-80 {
   max-width: 80%;
   margin: auto; }
@@ -42,6 +76,9 @@ body {
 
 .container-fluid {
   padding: 0; }
+
+.navbar .container-fluid {
+  padding: 10px 50px; }
 
 .cabecera > .row {
   padding-top: 10rem; }
@@ -66,6 +103,9 @@ body {
 .container-fluid.marcas {
   background-color: #111111;
   height: auto; }
+
+.bajada {
+  max-width: 50%; }
 
 .row.tragos {
   display: flex;
@@ -107,7 +147,8 @@ body {
 .promo-middle .column-1 .row {
   max-width: 80%;
   /* margin: auto; */
-  padding-left: 5rem; }
+  padding-left: 5rem;
+  row-gap: 5px; }
 
 .promo-middle .column-1 .nociones {
   display: flex; }
@@ -146,19 +187,144 @@ body {
 .card-cursos img {
   width: 100%; }
 
-.btn-amarillo {
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-family: raleway, sans-serif;
-  color: #111111;
-  text-decoration: none;
-  width: max-content;
-  background-size: 300% 100%;
-  transition: all 0.35s ease; }
-
-.btn-amarillo {
+#formulario {
   background: #FFDD67;
-  border: 2px solid #FFDD67; }
-  .btn-amarillo:hover {
-    background: transparent;
-    color: #FFDD67; }
+  display: flex;
+  justify-content: space-evenly;
+  height: 300px;
+  margin-top: 60px; }
+
+#formulario article, #formulario form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+#formulario h2 {
+  color: #111111;
+  font-size: 3rem;
+  margin: 6px 0; }
+
+#formulario p {
+  color: black; }
+
+#formulario form {
+  width: 300px; }
+
+.form-group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px; }
+
+.form-field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1rem;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s; }
+
+.form-field::placeholder {
+  color: transparent; }
+
+.form-field:placeholder-shown ~ .form-label {
+  cursor: text;
+  top: 20px; }
+
+.form-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+  border: #FE2962; }
+
+.form-field:focus {
+  padding-bottom: 6px;
+  font-weight: regular;
+  border-bottom: 3px solid #FE2962;
+  border-image-slice: 1; }
+
+.form-field:focus ~ .form-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #D82958;
+  font-weight: 700; }
+
+input:-internal-autofill-selected {
+  color: -internal-light-dark(red) !important; }
+
+@media (max-width: 1228px) {
+  .promo-middle .column-1 .nociones {
+    flex-direction: column; }
+  .titulo-portada {
+    margin-bottom: 130px; } }
+
+/* XXL */
+@media only screen and (min-width: 1770px) {
+  .titulo-portada {
+    margin-bottom: 350px; } }
+
+/* Mobile */
+@media only screen and (max-width: 415px) {
+  .navbar-brand {
+    padding: 0; }
+  .row.tragos {
+    overflow-x: scroll;
+    /* column-gap: 20px; */
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-left: 30px; }
+  .row.tragos .col-sm-6 {
+    box-shadow: none;
+    min-width: 250px;
+    margin-bottom: 3em;
+    width: 50vw; }
+  .container-fluid.promo-middle .column-2 {
+    height: 200px; }
+  .marcas .col-xs-3 {
+    width: 50%;
+    display: flex;
+    justify-content: center; }
+  .promo-middle .column-1 .row {
+    max-width: none;
+    padding-left: 0;
+    text-align: center; }
+  .promo-middle .column-1 h2 {
+    text-align: center; }
+  .nociones {
+    align-items: center; }
+  .row.tragos img {
+    filter: none; }
+  .portada-desktop {
+    display: none !important; }
+  .portada-mobile {
+    display: block !important; }
+  .carrusel-informacion {
+    justify-content: center; }
+  .hide-mobile {
+    display: none; }
+  .cabecera {
+    height: 500px; }
+  .nosotros-portada {
+    background-position: right; }
+  .cards {
+    flex-direction: column; }
+  .card-cursos {
+    max-width: 100%;
+    margin: 10px; }
+  .cards.column-1 {
+    margin-bottom: 0px; }
+  #formulario {
+    display: flex;
+    height: 470px;
+    flex-direction: column;
+    align-items: center; }
+  .titulo-portada {
+    margin-bottom: 0; } }

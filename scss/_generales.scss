@@ -32,24 +32,37 @@ $botones: (
         amarillo: $amarillo,
         magenta:  $magenta,
 ); 
+%efecto-boton{
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: raleway, sans-serif;
+    color: $negro;
+    text-decoration: none;
+    width: max-content;
+    background-size: 300% 100%;
+    transition: all 0.35s ease;
+    border: transparent;
+}
 
-// @each $red, $color in $botones {
-//     .btn-#{$red} {
-//         background-color: $color;
-//         padding: 10px 20px;
-//         border-radius: 5px;
-//         font-family: raleway, sans-serif;
-//         color: $negro;
-//         text-decoration: none;
-//         width: max-content;
-//     }
-//     &:hover{
-//         background: transparent;
-//         border: 2px solid $color;
-//         color: $color;
-//     }
-//  }
+@each $red, $color in $botones {
+    .btn-#{$red} {
+        background-color: $color;
+        font-family: raleway, sans-serif;
+        color: $negro;
+        @extend %efecto-boton;
+    }
+ }
  
+ @each $red, $color in $botones {
+    .btn-#{$red}:hover {
+        box-shadow: 1px -1px 20px 0px $color;
+        -webkit-box-shadow: 1px -1px 20px 0px $color;
+        -moz-box-shadow: 1px -1px 20px 0px $color;
+    }
+ }
+.btn-magenta{
+    color: $blanco;
+}
 .row.max-80{
     max-width: 80%;
     margin: auto;
@@ -60,6 +73,9 @@ $botones: (
 }
 .container-fluid{
     padding: 0;
+}
+.navbar .container-fluid{
+    padding: 10px 50px;
 }
 
 // <------ HOME ----->
@@ -86,6 +102,9 @@ $botones: (
 .container-fluid.marcas{
     background-color: $negro;
     height: auto;
+}
+.bajada{
+    max-width: 50%;
 }
 .row.tragos{
     display: flex;
@@ -129,6 +148,7 @@ $botones: (
     max-width: 80%;
     /* margin: auto; */
     padding-left: 5rem;
+    row-gap: 5px;
 }
 .promo-middle .column-1 .nociones{
     display: flex;
@@ -168,3 +188,78 @@ $botones: (
 .card-cursos img{
     width: 100%;
 }
+
+#formulario{
+    background: $amarillo;
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    margin-top: 60px;
+}
+#formulario article,#formulario form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#formulario h2{
+    color: $negro;
+    font-size: 3rem;
+    margin: 6px 0;
+}
+#formulario p{
+    color: black;
+}
+#formulario form{
+    width: 300px;
+}
+.form-group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+.form-field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1rem;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+.form-field::placeholder {
+    color: transparent;
+}
+.form-field:placeholder-shown ~ .form-label {
+    cursor: text;
+    top: 20px;
+  }
+  .form-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+    border: $magenta;
+  }
+  .form-field:focus {
+    padding-bottom: 6px;
+    font-weight: regular;
+    border-bottom: 3px solid $magenta;
+    border-image-slice: 1;
+  } 
+  .form-field:focus ~ .form-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #D82958;
+    font-weight: 700;
+  }  
+  input:-internal-autofill-selected {
+    color: -internal-light-dark(red) !important;
+  }
