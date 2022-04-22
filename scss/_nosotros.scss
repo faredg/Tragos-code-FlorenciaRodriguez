@@ -1,14 +1,20 @@
-.btn-amarillo{
-    background: $amarillo;
+%efecto-boton{
     padding: 10px 20px;
     border-radius: 5px;
     font-family: raleway, sans-serif;
     color: $negro;
     text-decoration: none;
     width: max-content;
+    background-size: 300% 100%;
+    transition: all 0.35s ease;
+}
+
+.btn-amarillo{
+    background: $amarillo;
+    @extend %efecto-boton;
+    border: 2px solid $amarillo;
     &:hover{
         background: transparent;
-        border: 2px solid $amarillo;
         color: $amarillo;
     }
 }

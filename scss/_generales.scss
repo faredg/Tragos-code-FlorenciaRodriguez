@@ -33,29 +33,138 @@ $botones: (
         magenta:  $magenta,
 ); 
 
-@each $red, $color in $botones {
-    .btn-#{$red} {
-        background-color: $color;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-family: raleway, sans-serif;
-        color: $negro;
-        text-decoration: none;
-        width: max-content;
-    }
-    &:hover{
-        background: transparent;
-        border: 2px solid $color;
-        color: $color;
-    }
- }
+// @each $red, $color in $botones {
+//     .btn-#{$red} {
+//         background-color: $color;
+//         padding: 10px 20px;
+//         border-radius: 5px;
+//         font-family: raleway, sans-serif;
+//         color: $negro;
+//         text-decoration: none;
+//         width: max-content;
+//     }
+//     &:hover{
+//         background: transparent;
+//         border: 2px solid $color;
+//         color: $color;
+//     }
+//  }
  
-
-
 .row.max-80{
     max-width: 80%;
     margin: auto;
 }
+.container{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.container-fluid{
+    padding: 0;
+}
+
+// <------ HOME ----->
 .cabecera > .row{
     padding-top: 10rem;
+}
+.portada-desktop, .portada-mobile{
+    width: 100%;
+}
+.titulo-portada{
+    text-align: left;
+    z-index: 10;
+    margin-bottom: 350px;
+}
+#navbarSupportedContent{
+    justify-content: flex-end;
+}
+#navbarSupportedContent>ul{
+    margin-right: 50px !important;
+}
+.portada-mobile{
+    display: none !important;
+}
+.container-fluid.marcas{
+    background-color: $negro;
+    height: auto;
+}
+.row.tragos{
+    display: flex;
+    justify-content: space-evenly;
+}
+.row.tragos img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: all 0.35s ease;
+        &:hover{
+        filter: none;
+        }
+}
+.descripcion-cards{
+    z-index: 6;
+    margin-top: -90px;
+    transition: all 0.35s ease;
+}
+.card-trago:hover .descripcion-cards{
+    z-index: 6;
+    margin-top: -100px;
+}
+.card-trago{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.container-fluid.promo-middle .column-2{
+    background-image: url(../assets/carrusel-vodka.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.promo-middle .column-1{
+    background-color: $negro;
+}
+.promo-middle .column-1 h2{
+    text-align: left;
+    font-size: 3rem;
+}
+.promo-middle .column-1 .row{
+    max-width: 80%;
+    /* margin: auto; */
+    padding-left: 5rem;
+}
+.promo-middle .column-1 .nociones{
+    display: flex;
+}
+.colum-descrpcion {
+    display: flex;
+    padding-right: 40px;
+}
+.colum-descrpcion > div {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.footer-info{
+    padding-top: 30px;
+}
+.marcas img{
+    width: 80%;
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-cursos{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    max-width: 30%;
+    /* min-height: 310px; */
+    transition: all 0.35s ease;
+    &:hover{
+    transform: scale(1.03);
+    }
+}
+.card-cursos img{
+    width: 100%;
 }
