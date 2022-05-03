@@ -1,0 +1,39 @@
+.cursos-portada{
+    background-image: url(../assets/portada-cursos.png);
+}
+.cabecera{
+    padding-top: 10rem;
+        background-size: cover;
+    background-repeat: no-repeat;
+    height: 25vw;
+}
+.card-cursos{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    max-width: 30%;
+    /* min-height: 310px; */
+    transition: all 0.35s ease;
+}
+.card-cursos:hover{
+    transform: scale(1.03);
+}
+.cursos .cards{
+    padding-bottom: 3rem;
+}
+.card-cursos h3{
+    font-family: Erotique Alternate Trial, serif;
+    text-align: left;
+    padding: 10px 20px;
+}
+.card-cursos p{
+    padding: 0px 20px 26px; 
+}
+.card-cursos img{
+    max-width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.promocion.verano{
+    background-image: url(../assets/promo-verano.png);
+    height: 300px;
+    background-size: cover;
+}

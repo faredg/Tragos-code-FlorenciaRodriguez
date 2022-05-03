@@ -1,302 +1,406 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">  
     <title>Trago Code</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./stylesheet.css">
- 
-</head>
-<body>
-    <header>
-        <!-- INTENTO DE MENU -->
-        <nav>
-        <div class="nav">
-            <!-- <ul>
-                <li><img src="" alt="instagram"></li>
-                <li><img src="" alt="facebook"></li>
-                <li><img src="" alt="twitter"></li>
-            </ul> -->
-            <a href="./Index.html"><img src="./assets/logo-trago.png" alt="logo-trago-code"></a>
-            <ul class="menu">
-              <li><a href="./Nosotros.html">Nosotros</a></li>
-              <li><a href="./Bebidas.html">Bebidas</a></li>
-                <div class="bebidas">
-                    <div class="column-menu">
-                    <h3>Destilados</h3>
-                        <a href="./bebidas/Vodka.html">Vodka</a>
-                        <a href="#">Tequila</a>
-                        <a href="#">Pisco</a>
-                        <a href="#">Whisky</a>
-                        <a href="#">Coñac</a>
-                        <a href="#">Ron</a>
-                        <a href="#">Gin</a>
-                        <a href="#">Cachaza</a>
-                    </div>
-                    <div class="column-menu">
-                    <h3>Fermentados</h3>
-                        <a href="#">Vinos</a>
-                        <a href="#">Cervezas</a>
-                        <a href="#">Sidra</a>
-                    </div>
-                    <div class="column-menu">
-                    <h3>Macerados</h3>
-                        <a href="#">Licores</a>
-                        <a href="#">Bitter</a>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- My CSS -->
+    <!-- <link rel="stylesheet" href="./stylesheet-v2.css"> -->
+    <link rel="stylesheet" href="./estilos/styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Meta tags extras-->
+    <meta name="title" content="Tragos Code">
+    <meta name="description" content="Aprendé a crear, decorar y degustar los mejores tragos del momento">
+    <meta name="keywords" content="tragos, bebidas, cocteles">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="Spanish">
+
+    <!-- Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Tragos Code">
+    <meta property="og:description" content="Aprendé a crear, decorar y degustar ¡Los mejores tragos del momento!">
+    <meta property="og:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Tragos Code">
+    <meta property="twitter:description" content="Aprendé a crear, decorar y degustar ¡Los mejores tragos del momento!">
+    <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+  
+  </head>
+  <body>
+  <!-- Navegador -->
+  <header>
+    <nav>
+      <div class="wrapper">
+        <div class="logo"><a href="./index.html"><img src="./assets/logo-trago.png" alt="" width="200" height="auto"></a></div>
+        <input type="radio" name="slider" id="menu-btn">
+        <input type="radio" name="slider" id="close-btn">
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+          <li><a href="./nosotros.html">Nosotros</a></li>
+          <li><a href="./cursos.html">Cursos</a></li>
+          <li><a href="./recetas.html">Recetas</a></li>
+          <li class="bebidas-menu">
+            <a href="./bebidas.html" class="desktop-item">Bebidas</a>
+            <input type="checkbox" id="showMega">
+            <label for="showMega" class="mobile-item">Bebidas</label>
+            <div class="mega-box">
+              <div class="content">
+                <div class="row">
+                  <header class="primero">Bebidas destiladas</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Tequila</a></li>
+                    <li><a href="#">Pisco</a></li>
+                    <li><a href="#">Whisky</a></li>
+                    <li><a href="#">Coñac</a></li>
+                </div>
+                <div class="row">
+                  <header class="transparente"> desaparecer </header>
+                  <ul class="mega-links">
+                    <li><a href="#">Ron</a></li>
+                    <li><a href="#">Gin</a></li>
+                    <li><a href="#">Cachaza</a></li>
+                    <li><a href="./bebidas/vodka.html">Vodka</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Bebidas fermentadas</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Vinos</a></li>
+                    <li><a href="#">Cervezas</a></li>
+                    <li><a href="#">Sidras</a></li>
+                    <li><a href="#">Champagne</a></li>
+                  </ul>
+                </div>
+                <div class="row">
+                  <header>Bebidas maceradas</header>
+                  <ul class="mega-links">
+                    <li><a href="#">Licores</a></li>
+                    <li><a href="#">Bitters</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="./index-v2.html#formulario">Contacto</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"><img src="./assets/menu.png" alt="menu-img" class="menu-hamburguesa"></label>
+      </div>
+    </nav>
+  </header>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/portada-01.png" class="d-block w-100 portada-desktop" alt="...">
+          <img src="./assets/portada-01-mobile.png" class="d-block w-100 portada-mobile" alt="...">
+          <div class="carousel-caption d-none d-md-block titulo-portada">
+            <h1>Aprende, crea <br class="hide-mobile"> y disfrutá</h1>
+            <p class="bajada">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices ullamcorper risus eu efficitur. Aenean at quam ut ante venenatis ultricies vitae pulvinar urna. Vestibulum vehicula urna quis faucibus ornare. Nullam fringilla leo eget posuere interdum. Curabitur at pretium quam. </p>
+            <p><a href="#" class="btn-amarillo">¡Quiero ver recetas!</a></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/portada-02.png" class="d-block w-100 portada-desktop" alt="...">
+          <img src="./assets/cursos-mobile.png" class="d-block w-100 portada-mobile" alt="...">
+          <div class="carousel-caption d-none d-md-block titulo-portada">
+            <h1>Capacitate con los mejores<br class="hide-mobile"> profesionales</h1>
+            <p class="bajada">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices ullamcorper risus eu efficitur. Aenean at quam ut ante venenatis ultricies vitae pulvinar urna. Vestibulum vehicula urna quis faucibus ornare. Nullam fringilla leo eget posuere interdum. Curabitur at pretium quam. </p>
+            <p><a href="#" class="btn-amarillo">Ver los cursos</a></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Marcas -->
+    <section class="container-fluid marcas">
+      <div class="row">
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-1">
+          <img src="./assets/marca-smirnoff.png" alt="marca-smirnoff">
+        </article>
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-2">
+          <img src="./assets/marca-bombay.png" alt="marca-bombay">
+        </article>
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-3">
+          <img src="./assets/marca-havanaclub.png" alt="marca-havanaclub">
+        </article>
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-4">
+          <img src="./assets/marca-johnnie.png" alt="marca-johnnie">
+        </article>
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-5">
+          <img src="./assets/marca-josecuervo.png" alt="marca-josecuervo">
+        </article>
+        <article class="col-sm-3 col-xs-3 col-md-4 col-lg-4 col-xl-2 column-6">
+          <img src="./assets/marca-absolut.png" alt="marca-absolut">
+        </article>
+      </div>
+    </section>
+    <!-- Section Tragos -->
+    <div class="container">
+      <h2>Trending Tragos</h2>
+      <div class="row tragos">
+        <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-1">
+          <a href="#" class="card-trago">
+              <img src="./assets/trago-bloodymary-color.png" alt="imagen-bloody-mary" class="imagen-card">
+              <div class="descripcion-cards">
+                  <h4>Aperitivos</h4>
+                  <h3>BLOODYMARY</h3>
+              </div>
+          </a>
+      </article>
+      <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-2">
+          <a href="#" class="card-trago">
+              <img src="./assets/trago-ginmandarina-color.png" alt="imagen-gin-mandarina" class="imagen-card">
+              <div class="descripcion-cards">
+                  <h4>Aperitivos</h4>
+                  <h3>GIN MANDARINA</h3>
+              </div>
+          </a>
+      </article>
+      <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-3">
+          <a href="#" class="card-trago">
+              <img src="./assets/trago-carioca-color.png" alt="imagen-postre" class="imagen-card">
+              <div class="descripcion-cards">
+                  <h4>Postre</h4>
+                  <h3>CARIOCA</h3>
+              </div>
+          </a>
+      </article>
+      <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-4">
+          <a href="#" class="card-trago">
+              <img src="./assets/trago-newallfashion-color.png" alt="imagen-new-all-fashion" class="imagen-card">
+              <div class="descripcion-cards">
+                  <h4>Aperitivos</h4>
+                  <h3>NEW ALL FASHION</h3>
+              </div>
+          </a>
+      </article>
+      </div>
+    </div>
+    <div class="container-fluid promo-middle">
+      <div class="row">
+        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 column-1">
+          <div class="container">
+            <div class="row carrusel-informacion">
+              <h2>Vodka</h2>
+              <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit molestie pharetra. Donec purus magna, vehicula vel velit et.</p>
+              <div class="nociones">
+                <div class="colum-descrpcion">
+                    <img src="./assets/countries.svg" alt="icono-01">
+                    <div>
+                        <h6>Mayor productor</h6>
+                        <p>Rusia, Polonia y Lituania</p>
                     </div>
                 </div>
-              <li><a href="./Recetas.html">Recetas</a></li>
-              <li><a href="./Cursos.html">Cursos</a></li>          
-            </ul>
-        </div>
-        </nav>
-        <!-- <div class="slider"> -->
-          <!-- ACA DEBERIA TENER UN SLIDER ¿SE PUEDE? -->
-          <!-- <div class="portada-texto-izquierda">
-              <H1>Aprendé, crea y <br> disfrutá</H1>
-              <p class="down-tittle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit <br> molestie pharetra. Donec purus magna, vehicula vel velit et.</p>
-              <p><a href="#" class="btn-amarillo">¡Quiero ver recetas!</a></p>  
+                <div class="colum-descrpcion">
+                    <img src="./assets/vodka (1).svg" alt="icono-01">
+                    <div>
+                        <h6>Grados de Alcohol</h6>
+                        <p>Entre 37% y 50%</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn-amarillo">Aprendé más</a>
           </div>
-          <div class="portada-texto-derecha portada-home"></div>  
-        </div> -->
 
-    </header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="./assets/portada-01.png" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>Aprende, crea y disfrutá</h1>
-                <p><a href="#" class="btn-amarillo">¡Quiero ver recetas!</a></p>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="./assets/portada-02.png" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-                <h1>Aprende, crea y disfrutá</h1>
-                <p><a href="#" class="btn-amarillo">¡Quiero ver recetas!</a></p>
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="..." alt="Third slide">
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 column-2">
+            <!-- <img src="./assets/carrusel-vodka.png" alt="img-vodka"> -->
+        </div> 
       </div>
-    <div class="container-fluid">
-        <div class="row">
-            <section class="marcas col-sm-12 col-md-12 .col-lg-12">
-                <img src="./assets/marca-smirnoff.png" alt="marca-01">
-                <img src="./assets/marca-smirnoff.png" alt="marca-02">
-                <img src="./assets/marca-smirnoff.png" alt="marca-03">
-                <img src="./assets/marca-smirnoff.png" alt="marca-04">
-                <img src="./assets/marca-smirnoff.png" alt="marca-05">
-                <img src="./assets/marca-smirnoff.png" alt="marca-06">
-            </section>        
-        </div>
+    </div>
+    <div class="container">
+      <h2>Bebidas del veranos</h2>
+      <div class="row tragos">
+        <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-1">
+          <a href="#" class="card-trago">
+              <img src="./assets/trago-blue.png" alt="imagen-trago-blue-margarita" class="imagen-card">
+              <div class="descripcion-cards">
+                  <h4>Aperitivos</h4>
+                  <h3>BLUE MARGARITA</h3>
+              </div>
+          </a>
+      </article>
+      <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-2">
+          <a href="#" class="card-trago">
+              <img src="./assets/trago-gin-del-bosque.png" alt="imagen-gin-del-bosque" class="imagen-card">
+              <div class="descripcion-cards">
+                  <h4>Aperitivos</h4>
+                  <h3>GIN DEL BOSQUE</h3>
+              </div>
+          </a>
+      </article>
+      <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-3">
+          <a href="#" class="card-trago">
+              <img src="./assets/trago-nocturna.png" alt="imagen-trago-nocturna" class="imagen-card">
+              <div class="descripcion-cards">
+                  <h4>Principal</h4>
+                  <h3>NOCTURNA</h3>
+              </div>
+          </a>
+      </article>
+      <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-4">
+          <a href="#" class="card-trago">
+              <img src="./assets/trago-russian.png" alt="imagen-trago-russian" class="imagen-card">
+              <div class="descripcion-cards">
+                  <h4>Postre</h4>
+                  <h3>RUSSIAN</h3>
+              </div>
+          </a>
+      </article>
+      </div>
     </div>
     <div class="container-fluid">
-        <div class="row">
-            <section id="trending-tragos" class="section">
-                <h2>Trending Tragos</h2>
-                <div class="cards">
-                    <article class="col-sm-12 col-md-3 col-lg-2">
-                        <a href="#" class="card-trago">
-                            <img src="./assets/trago-bloodymary-color.png" alt="imagen-bloody-mary" class="imagen-card">
-                            <div class="descripcion-cards">
-                                <h4>Aperitivos</h4>
-                                <h3>BloodyMary</h3>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="col-sm-12 col-md-3 col-lg-2">
-                        <a href="#" class="card-trago">
-                            <img src="./assets/trago-ginmandarina-color.png" alt="imagen-bloody-mary" class="imagen-card">
-                            <div class="descripcion-cards">
-                                <h4>Aperitivos</h4>
-                                <h3>BloodyMary</h3>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="col-sm-12 col-md-3 col-lg-2">
-                        <a href="#" class="card-trago">
-                            <img src="./assets/trago-carioca-color.png" alt="imagen-bloody-mary" class="imagen-card">
-                            <div class="descripcion-cards">
-                                <h4>Aperitivos</h4>
-                                <h3>BloodyMary</h3>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="col-sm-12 col-md-3 col-lg-2">
-                        <a href="#" class="card-trago">
-                            <img src="./assets/trago-newallfashion-color.png" alt="imagen-bloody-mary" class="imagen-card">
-                            <div class="descripcion-cards">
-                                <h4>Aperitivos</h4>
-                                <h3>BloodyMary</h3>
-                            </div>
-                        </a>
-                    </article>
-                </div>
-                <p class="center"><a href="#" class="btn-amarillo">Conocé todos los tragos</a></p>
-                <a href="#" class="btn btn-primary">HOLA MUNDO</a>
-            </section>
+      <div class="row">
+        <section id="formulario">
+          <article>
+              <h2>Suscribite</h2>
+              <p>Recibí todas las tendencias y cursos</p>
+          </article>
+          <form action="">
+              <div class="form-group">
+                  <input class="form-field" type="input" placeholder="Nombre" id="nombre" name="nombre" required>
+                  <label class="form-label" for="nombre">Nombre</label>
+              </div>
+              <br>
+              <div class="form-group">
+                  <input class="form-field" type="email" placeholder="Ingrese su correo" id="email" name="email" required>
+                  <label class="form-label" for="email">Email</label>    
+              </div>
+              <br>
+              <input type="submit" value="Enviar" class="btn-magenta">
+          </form>  
+      </section>
+      </div>
+    </div>
+     
+HTML
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted bg-dark">
+  <!-- Section: Social media -->
+  <!-- Section: Links  -->
+  <section class="footer-info">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+          Sobre Nosotros
+          </h6>
+          <p>
+            sLorem ipsum dolor sit amet consectetur, adipisicing elit. Non aliquam tempora odio deserunt, veritatis consequatur. Voluptas sint laudantium possimus doloremque! Vitae explicabo sint iusto nobis delectus. Sed labore eveniet minus.
+          </p>
         </div>
-||||</div>
-    <section class="Carrusel-bebidas">
-       <article id="carrusel-vodka">
-            <div class="derecha">
-                <h2>Vodka</h2>
-                <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit molestie pharetra. Donec purus magna, vehicula vel velit et.</p>
-                <div class="nociones">
-                    <div class="colum-descrpcion">
-                        <img src="./assets/countries.svg" alt="icono-01">
-                        <div >
-                            <h6>Mayor productor</h6>
-                            <p>Rusia, Polonia y Lituania</p>
-                        </div>
-                    </div>
-                    <div class="colum-descrpcion">
-                        <img src="./assets/vodka (1).svg" alt="icono-01">
-                        <div>
-                            <h6>Grados de Alcohol</h6>
-                            <p>Entre 37% y 50%</p>
-                        </div>
-                    </div>
-                </div>
-            <a href="#" class="btn-amarillo">Aprendé más</a>
-            </div>
-            <div class=izquierda>
-                <!-- <img src="./assets/carrusel-vodka.png" alt="img-vodka"> -->
-            </div>
-       </article>
-    </section>
-    <section id="bebidas-verano " class="section">
-        <h2>Bebidas del verano</h2>
-        <div class="cards">
-            <article>
-                <a href="#" class="card-trago">
-                    <img src="./assets/trago-bluemargarita-byn.png" alt="imagen-bloody-mary" class="imagen-card">
-                    <div class="descripcion-cards">
-                        <h4>Aperitivos</h4>
-                        <h3>BloodyMary</h3>
-                    </div>
-                </a>
-            </article>
-            <article>
-                <a href="#" class="card-trago">
-                    <img src="./assets/trago-gindelbosque-byn.png" alt="imagen-bloody-mary" class="imagen-card">
-                    <div class="descripcion-cards">
-                        <h4>Aperitivos</h4>
-                        <h3>BloodyMary</h3>
-                    </div>
-                </a>
-            </article>
-            <article>
-                <a href="#" class="card-trago">
-                    <img src="./assets/trago-nocturna-byn.png" alt="imagen-bloody-mary" class="imagen-card">
-                    <div class="descripcion-cards">
-                        <h4>Aperitivos</h4>
-                        <h3>BloodyMary</h3>
-                    </div>
-                </a>
-            </article>
-            <article class="card-trago">
-                <a href="#" class="card-trago">
-                    <img src="./assets/trago-russian-byn.png" alt="imagen-bloody-mary" class="imagen-card">
-                    <div class="descripcion-cards">
-                        <h4>Aperitivos</h4>
-                        <h3>BloodyMary</h3>
-                    </div>
-                </a>
-            </article>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Menu
+          </h6>
+          <p>
+            <a href="./index-v2.html" class="text-reset">Inicio</a>
+          </p>
+          <p>
+            <a href="./nosotros.html" class="text-reset">Nosotros</a>
+          </p>
+          <p>
+            <a href="./bebidas.html" class="text-reset">Bebidas</a>
+          </p>
+          <p>
+            <a href="./recetas.html" class="text-reset">Recetas</a>
+          </p>
         </div>
-        <!-- <div class="cards">
-            <article class="cards-verano-1 card-trago">
-                <h4>Aperitivos</h4>
-                <h3>BloodyMary</h3>
-            </article>
-            <article class="cards-verano-2 card-trago"> 
-                <h4>Aperitivos</h4>
-                <h3>BloodyMary</h3>
-            </article>
-            <article class="cards-verano-3 card-trago">
-                <h4>Aperitivos</h4>
-                <h3>BloodyMary</h3>
-            </article>
-            <article class="cards-verano-4 card-trago">
-                <h4>Aperitivos</h4>
-                <h3>BloodyMary</h3>
-            </article>
-        </div> -->
-    </section>
-    <section id="formulario">
-        <article>
-            <h2>Suscribite</h2>
-            <p>Recibí todas las tendencias y cursos</p>
-        </article>
-        <form action="">
-            <div class="form-group">
-                <input class="form-field" type="input" placeholder="Nombre" id="nombre" name="nombre" required>
-                <label class="form-label" for="nombre">Nombre</label>
-            </div>
-            <br>
-            <div class="form-group">
-                <input class="form-field" type="email" placeholder="Ingrese su correo" id="email" name="email" required>
-                <label class="form-label" for="email">Email</label>    
-            </div>
-            <br>
-            <!-- <label for="contenido">¿Que querés recibir?</label>
-            <select name="contenido" id="">
-                <option value="recetas">Recetas</option>
-                <option value="cursos">Nuevos cursos</option>
-                <option value="todo">Todas las novedades</option>
-            </select>         -->
-            <br>
-            <input type="submit" value="Enviar" class="btn-rosado">
-        </form>  
-    </section>
-    <footer>
-        <div id="footer" class="section">
-            <div class="column-footer-01">
-                <a href="./Index.html"><img src="./assets/logo-trago.png" alt="logo-trago-code"></a>
-                <ul class="redes-sociales">
-                    <li><img src="./assets/instagram.svg" alt="instagram"></li>
-                    <li><img src="./assets/facebook.svg" alt="facebook"></li>
-                    <li><img src="./assets/youtube.svg" alt="twitter"></li>
-                </ul>
-            </div>
-            <div class="column-footer-01">
-                <h5>Menu</h5>
-                <ul class="menu">
-                    <li><a href="./Index.html">Inicio</a></li>
-                    <li><a href="./Nosotros.html">Nosotros</a></li>
-                    <li><a href="./bebidas/">Bebidas</a></li>
-                    <li><a href="./Recetas.html">Recetas</a></li>
-                    <li><a href="./Cursos.html">Cursos</a></li> 
-                </ul>
-            </div>
-            <div class="column-footer-02">
-                <h5>Sobre Nosotros</h5>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non aliquam tempora odio deserunt, veritatis consequatur. Voluptas sint laudantium possimus doloremque! Vitae explicabo sint iusto nobis delectus. Sed labore eveniet minus.</p>
-                <p class="by">Create by <a href="www.faredg.com">www.faredg.com</a></p>
-            </div>                    
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Legales
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Politicas de privacidad</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Cookies</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Terminos y Condiciones</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Ayuda</a>
+          </p>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>              
-</body>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p>Palermo, Buenos Aires, Argentina</p>
+          <p>info@tragoscode.com</p>
+          <p>011 1578451236</p>
+          <!-- <p> + 01 234 567 89</p> -->
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="https://faredg.com/">faredg.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+    
+  </body>
 </html>

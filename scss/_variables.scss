@@ -3,6 +3,21 @@ $amarillo: #FFDD67;
 $blanco: white;
 $negro: #111111;
 $azul: #101A24;
+$grey: #242526;
 
 $tipografia-general: Erotique Alternate Trial, serif;
 $tipografia-alternativa: raleway, sans-serif;
+
+.promocion.cursos{
+    background-image: url(./assets/promo-verano.png);
+    height: 300px;
+    background-size: cover;
+    margin-top: 25px;
+    padding-left: 20px;
+}
+%cartelpromocion{
+    height: 300px;
+    background-size: cover;
+    margin-top: 25px;
+    padding-left: 20px;
+}

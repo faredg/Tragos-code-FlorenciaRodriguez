@@ -14,52 +14,73 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- My CSS -->
     <link rel="stylesheet" href="./stylesheet-v2.css">
+    <link rel="stylesheet" href="./estilos/styles.css">
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img src="./assets/logo-trago.png" alt="" width="200" height="auto">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Nosotros</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Bebidas
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Destiladas</a></li>
-                    <li><a class="dropdown-item" href="#">Fermentadas</a></li>
-                    <li><a class="dropdown-item" href="#">Maceradas</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Cursos</a>
-                </li>
-              </ul>
-              <!-- <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form> -->
-            </div>
-          </div>
-        </nav>
+      <nav>
+        <div class="wrapper">
+          <div class="logo"><a href="./index.html"><img src="./assets/logo-trago.png" alt="" width="200" height="auto"></a></div>
+          <input type="radio" name="slider" id="menu-btn">
+          <input type="radio" name="slider" id="close-btn">
+          <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./cursos.html">Cursos</a></li>
+            <li><a href="./recetas.html">Recetas</a></li>
+            <li>
+              <a href="./bebidas.html" class="desktop-item">Bebidas</a>
+              <input type="checkbox" id="showMega">
+              <label for="showMega" class="mobile-item">Bebidas</label>
+              <div class="mega-box">
+                <div class="content">
+                  <div class="row">
+                    <header class="primero">Bebidas destiladas</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Tequila</a></li>
+                      <li><a href="#">Pisco</a></li>
+                      <li><a href="#">Whisky</a></li>
+                      <li><a href="#">Coñac</a></li>
+                  </div>
+                  <div class="row">
+                    <header class="transparente"> desaparecer </header>
+                    <ul class="mega-links">
+                      <li><a href="#">Ron</a></li>
+                      <li><a href="#">Gin</a></li>
+                      <li><a href="#">Cachaza</a></li>
+                      <li><a href="./bebidas/vodka.html">Vodka</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Bebidas fermentadas</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Vinos</a></li>
+                      <li><a href="#">Cervezas</a></li>
+                      <li><a href="#">Sidras</a></li>
+                      <li><a href="#">Champagne</a></li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <header>Bebidas maceradas</header>
+                    <ul class="mega-links">
+                      <li><a href="#">Licores</a></li>
+                      <li><a href="#">Bitters</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li><a href="./index-v2.html#formulario">Contacto</a></li>
+          </ul>
+          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+      </nav>
       </header>
     <main>
-        <section class="section container-fluid nosotros-portada cabecera">
+        <section class="section container-fluid cabecera" id="bebidas-portada">
             <div class="row max-80">
                 <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6 column-1">
                     <h1>Bebidas</h1>
@@ -70,11 +91,11 @@
             </div>
         </section>
         <section class="container">
-            <h2>Bebidas destiladas</h2>
+            <h2 class="titulo-bebidas">Bebidas destiladas</h2>
             <section class="row tragos">
               <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-1">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-bloodymary-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebida-tequila.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>TEQUILA</h3>
                     </div>
@@ -82,7 +103,7 @@
             </article>
             <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-2">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-ginmandarina-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebida-pisco.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>PISCO</h3>
                     </div>
@@ -90,7 +111,7 @@
             </article>
             <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-3">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-carioca-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebida-whisky.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>WHISKY</h3>
                     </div>
@@ -98,19 +119,53 @@
             </article>
             <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-4">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-newallfashion-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebida-conac.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>COÑAC</h3>
                     </div>
                 </a>
             </article>
         </section>
+        <section class="row tragos">
+          <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-1">
+            <a href="#" class="card-trago">
+                <img src="./assets/bebida-ron.png" alt="imagen-bloody-mary" class="imagen-card">
+                <div class="descripcion-cards">
+                    <h3>RON</h3>
+                </div>
+            </a>
+        </article>
+        <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-2">
+            <a href="#" class="card-trago">
+                <img src="./assets/bebida-gin.png" alt="imagen-bloody-mary" class="imagen-card">
+                <div class="descripcion-cards">
+                    <h3>GIN</h3>
+                </div>
+            </a>
+        </article>
+        <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-3">
+            <a href="#" class="card-trago">
+                <img src="./assets/bebida-cachaza.png" alt="imagen-bloody-mary" class="imagen-card">
+                <div class="descripcion-cards">
+                    <h3>CACHAZA</h3>
+                </div>
+            </a>
+        </article>
+        <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-4">
+            <a href="#" class="card-trago">
+                <img src="./assets/bebida-vodka.png" alt="imagen-bloody-mary" class="imagen-card">
+                <div class="descripcion-cards">
+                    <h3>VODKA</h3>
+                </div>
+            </a>
+        </article>
+    </section>
         <section class="container">
             <h2>Bebidas fermentadas</h2>
             <section class="row tragos">
               <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-1">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-bloodymary-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebidas-vino.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>VINOS</h3>
                     </div>
@@ -118,7 +173,7 @@
             </article>
             <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-2">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-ginmandarina-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebidas-cerveza.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>CERVEZAS</h3>
                     </div>
@@ -126,7 +181,7 @@
             </article>
             <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-3">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-carioca-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebida-sidras.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>SIDRAS</h3>
                     </div>
@@ -134,7 +189,7 @@
             </article>
             <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-4">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-newallfashion-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebidas-champagne.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>CHAMPAGNE</h3>
                     </div>
@@ -146,7 +201,7 @@
             <section class="row tragos">
               <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-1">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-bloodymary-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebidas-licor.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>LICORES</h3>
                     </div>
@@ -154,7 +209,7 @@
             </article>
             <article class="col-sm-6 col-xs-12 col-md-3 col-lg-3 column-2">
                 <a href="#" class="card-trago">
-                    <img src="./assets/trago-ginmandarina-color.png" alt="imagen-bloody-mary" class="imagen-card">
+                    <img src="./assets/bebidas-bitter.png" alt="imagen-bloody-mary" class="imagen-card">
                     <div class="descripcion-cards">
                         <h3>BITTERS</h3>
                     </div>

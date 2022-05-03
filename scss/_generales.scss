@@ -22,10 +22,14 @@ p, .form-label, a, h5, h6{
     font-family: $tipografia-alternativa;
 }
 p{
+    font-size: 1.1rem;
     color: $blanco;
 }
 body{
     background-color: $azul;
+}
+img{
+    max-width: 100%;
 }
 
 $botones: ( 
@@ -43,6 +47,14 @@ $botones: (
     transition: all 0.35s ease;
     border: transparent;
 }
+%efecto-portadas{
+    height: 300px;
+    background-size: cover;
+    margin-top: 25px;
+    padding-left: 20px;
+}
+
+
 
 @each $red, $color in $botones {
     .btn-#{$red} {
@@ -263,3 +275,21 @@ $botones: (
   input:-internal-autofill-selected {
     color: -internal-light-dark(red) !important;
   }
+
+ #bebidas-portada{
+    background-image: url(../assets/portada-bebidas.jpg);
+}
+
+.bold-amarillo{
+    color: $amarillo
+}
+.promocion.nosotros{
+    background-image: url(../assets/promo-nosotros.png);
+    @extend %cartelpromocion;
+}
+.nosotros-portada{
+    background-image: url(../assets/portada-nosotros.png);
+}
+.promocion h2{
+    text-align: left;
+}
