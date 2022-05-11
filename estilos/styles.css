@@ -377,6 +377,15 @@ input:-internal-autofill-selected {
     background-image: url(../assets/portada-nosotros-mobile.png); }
   .cabecera {
     height: 175vw !important; }
+  .carousel-caption.d-none.d-md-block.titulo-portada{
+    display: block;}
+    .bajada{
+      max-width: 100%;
+      font-size: 1rem;
+    }
+    h1{
+      font-size: 3rem;
+    }
   .recetas-portada, .cursos-portada, #bebidas-portada {
     background-position: 50%; } }
 
