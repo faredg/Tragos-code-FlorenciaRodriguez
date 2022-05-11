@@ -28,10 +28,10 @@
           <input type="radio" name="slider" id="close-btn">
           <ul class="nav-links">
             <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-            <li><a href="./index.html">Inicio</a></li>
             <li><a href="./nosotros.html">Nosotros</a></li>
-            <li><a href="./cursos.html">Cursos</a></li>
-            <li>
+            <li><a href="./cursos.html" class="active-nav">Cursos</a></li>
+            <li><a href="./recetas.html">Recetas</a></li>
+            <li class="bebidas-menu">
               <a href="./bebidas.html" class="desktop-item">Bebidas</a>
               <input type="checkbox" id="showMega">
               <label for="showMega" class="mobile-item">Bebidas</label>
@@ -73,12 +73,12 @@
                 </div>
               </div>
             </li>
-            <li><a href="./index-v2.html#formulario">Contacto</a></li>
+            <li><a href="./index.html#formulario">Contacto</a></li>
           </ul>
-          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+          <label for="menu-btn" class="btn menu-btn"><img src="./assets/menu.png" alt="menu-img" class="menu-hamburguesa"></label>
         </div>
       </nav>
-      </header>
+        </header>
     <main>
         <section class="section container-fluid cursos-portada cabecera">
             <div class="row max-80">
@@ -98,7 +98,9 @@
                         <div>
                             <h3>Herramientas básicas</h3>
                             <P>Por Juana Marco</P>
-                            <p><a href="#" class="btn-amarillo">Ver ahora</a></p>    
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-amarillo">
+                              Ver ahora
+                            </button>
                         </div>
                     </article>
                     <article class="card-cursos">
@@ -106,16 +108,18 @@
                         <div>
                             <h3>Aperitivos</h3>
                             <P>Por Ramiro Casanova</P>
-                            <p><a href="#" class="btn-amarillo">Ver ahora</a></p>
-                        </div>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-amarillo">
+                              Ver ahora
+                            </button>                        </div>
                     </article>
                     <article class="card-cursos">
                         <img src="./assets/curso-03.png" alt="curso03">
                         <div>
                             <h3>Humos y coctelería</h3>
                             <P>Por Francisco Herrera</P>
-                            <p><a href="#" class="btn-amarillo">Ver ahora</a></p>
-                        </div>
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-amarillo">
+                              Ver ahora
+                            </button>                        </div>
                     </article>
     
                 </div>
@@ -125,24 +129,27 @@
                     <div>
                         <h3>Mixología desde cero</h3>
                         <P>Por Sofía Benavidez</P>
-                        <p><a href="#" class="btn-amarillo">Ver ahora</a></p>
-                        </div>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-amarillo">
+                          Ver ahora
+                        </button>                        </div>
                 </article>
                 <article class="card-cursos">
                     <img src="./assets/curso-05.png" alt="curso05">
                     <div>
                         <h3>Cata y vinos</h3>
                         <P>Por Camila Ramirez</P>
-                        <p><a href="#" class="btn-amarillo">Ver ahora</a></p>    
-                    </div>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-amarillo">
+                          Ver ahora
+                        </button>                    </div>
                 </article>
                 <article class="card-cursos">
                     <img src="./assets/curso-06.png" alt="curso06">
                     <div>
                         <h3>Tragos con café</h3>
                         <P>Por Hernán Covas</P>
-                        <p><a href="#" class="btn-amarillo">Ver ahora</a></p>    
-                    </div>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn-amarillo">
+                          Ver ahora
+                        </button>                    </div>
                 </article>
             </div>
         </div>
@@ -156,6 +163,19 @@
             </div>
         </section>
     </main>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/AR8aOxLSv84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-amarillo" data-bs-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
     <footer class="text-center text-lg-start bg-light text-muted bg-dark">
         <!-- Section: Social media -->
         <!-- Section: Links  -->
@@ -182,7 +202,7 @@
                   Menu
                 </h6>
                 <p>
-                  <a href="./index-v2.html" class="text-reset">Inicio</a>
+                  <a href="./index.html" class="text-reset">Inicio</a>
                 </p>
                 <p>
                   <a href="./nosotros.html" class="text-reset">Nosotros</a>

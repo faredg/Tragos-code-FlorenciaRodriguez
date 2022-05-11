@@ -100,7 +100,7 @@ $botones: (
 .titulo-portada{
     text-align: left;
     z-index: 10;
-    margin-bottom: 350px;
+    margin-bottom: 100px;
 }
 #navbarSupportedContent{
     justify-content: flex-end;
@@ -122,7 +122,7 @@ $botones: (
     display: flex;
     justify-content: space-evenly;
 }
-.row.tragos img{
+.row.tragos img, .row.recetas img{
     width: 100%;
     filter: grayscale(100%);
     transition: all 0.35s ease;
@@ -167,7 +167,10 @@ $botones: (
 }
 .colum-descrpcion {
     display: flex;
-    padding-right: 40px;
+    // padding-right: 40px;
+}
+.colum-descrpcion:nth-child(2) img{
+    width: 60;
 }
 .colum-descrpcion > div {
     width: 200px;
@@ -234,7 +237,7 @@ $botones: (
     font-family: inherit;
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #9b9b9b;
+    border-bottom: 2px solid $negro;
     outline: 0;
     font-size: 1rem;
     padding: 7px 0;
@@ -254,7 +257,7 @@ $botones: (
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: #9b9b9b;
+    color:$negro;
     border: $magenta;
   }
   .form-field:focus {
@@ -287,9 +290,16 @@ $botones: (
     background-image: url(../assets/promo-nosotros.png);
     @extend %cartelpromocion;
 }
+.promocion.cursos{
+    background-image: url(../assets/promo-verano.png);
+    @extend %cartelpromocion;
+}
 .nosotros-portada{
     background-image: url(../assets/portada-nosotros.png);
 }
 .promocion h2{
     text-align: left;
+}
+.active-nav{
+    color: $amarillo !important;
 }

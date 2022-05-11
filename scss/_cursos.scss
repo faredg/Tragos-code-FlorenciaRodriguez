@@ -5,7 +5,7 @@
     padding-top: 10rem;
         background-size: cover;
     background-repeat: no-repeat;
-    height: 25vw;
+    height: 40vw;
 }
 .card-cursos{
     background: rgba(255, 255, 255, 0.2);
@@ -26,7 +26,7 @@
     padding: 10px 20px;
 }
 .card-cursos p{
-    padding: 0px 20px 26px; 
+    padding: 0px 20px 0px; 
 }
 .card-cursos img{
     max-width: 100%;
@@ -36,4 +36,19 @@
     background-image: url(../assets/promo-verano.png);
     height: 300px;
     background-size: cover;
+}
+button.btn-amarillo{
+    margin: 0 0 20px 20px;
+}
+iframe{
+    max-width: 100%;
+}
+.modal-content{
+    background: #2c3238;
+    border-radius: 10px;
+    color: $blanco;
+}
+.modal-footer{
+    border-top: none;
+    padding: 0 0.75rem 0.75rem 0;
 }
